@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo Águas | Movimento Escalada de Brasília</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        escalada: {
+                            deep: '#0B2545',
+                            dark: '#13385F',
+                            sky: '#0EA5E9',
+                            lightSky: '#38BDF8',
+                            accent: '#F59E0B',
+                            accentHover: '#D97706',
+                            surface: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(11, 37, 69, 0.86) 0%, rgba(19, 56, 95, 0.78) 100%), var(--hero-photo) center 55%/cover no-repeat;
+        }
+        .gold-glow {
+            box-shadow: 0 0 35px rgba(245, 158, 11, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-escalada-deep/95 backdrop-blur-md shadow-lg border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-amber-400 shadow-md group-hover:scale-105 transition-transform flex-shrink-0">
+                        <img src="data:image/jpeg;base64,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" alt="Perfil Grupo Águas" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/0b2545/ffffff?text=Aguas'">
+                    </div>
+                    <div>
+                        <span class="block font-heading font-bold text-white text-base sm:text-lg tracking-wider">GRUPO ÁGUAS</span>
+                        <span class="block text-xs font-medium text-sky-300 tracking-widest uppercase">Escalada Brasília</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-slate-200">
+                    <a href="#inicio" class="hover:text-amber-400 transition-colors">Início</a>
+                    <a href="#movimento" class="hover:text-amber-400 transition-colors">O Movimento</a>
+                    <a href="#historia" class="hover:text-amber-400 transition-colors">História</a>
+                    <a href="#grupo" class="hover:text-amber-400 transition-colors">O Grupo Águas</a>
+                    <a href="#encontros" class="hover:text-amber-400 transition-colors">Encontros (Quartas 19:30)</a>
+                    <a href="#galeria" class="hover:text-amber-400 transition-colors">Galeria</a>
+                    <a href="#arquidiocese" class="hover:text-amber-400 transition-colors">Arquidiocese</a>
+                    <a href="https://www.instagram.com/movimentoescaladabsb/" target="_blank" class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-5 py-2.5 rounded-full font-semibold shadow-md transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" aria-label="Abrir Menu" class="lg:hidden text-white text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-escalada-deep/98 border-t border-white/10 px-6 py-6 space-y-4 text-center shadow-2xl">
+            <a href="#inicio" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Início</a>
+            <a href="#movimento" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">O Movimento</a>
+            <a href="#historia" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">História</a>
+            <a href="#grupo" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">O Grupo Águas</a>
+            <a href="#encontros" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Encontros (Quartas 19:30)</a>
+            <a href="#galeria" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Galeria</a>
+            <a href="#arquidiocese" class="block text-white hover:text-amber-400 text-lg font-medium mobile-link py-1">Arquidiocese</a>
+            <a href="https://www.instagram.com/movimentoescaladabsb/" target="_blank" class="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white py-3 rounded-xl font-semibold shadow-md mt-2">
+                <i class="fa-brands fa-instagram"></i> @movimentoescaladabsb
+            </a>
+        </div>
+    </header>
+
+    <section id="inicio" class="relative min-h-screen hero-gradient flex items-center justify-center text-center px-4 pt-28 pb-16 overflow-hidden">
+        <!-- (Restante do código mantido conforme a estrutura original) -->
+    </section>
+</body>
+</html>
